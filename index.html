@@ -1,101 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>An econ project by Yifei and Alan.</title>
-	<!-- Google Fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans" rel="stylesheet">
-	<!-- jQuery 3.1 -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-	<style>
-		#loader p {
-			font-size: 1.8rem;
-		}
-		#loader {
-			display: inline;
-			position: absolute;
-			background-color: #FFF;
-			padding: 0;
-			top: 0;
-			bottom: 0;
-			left: 0;
-			right: 0;
-			height: 100%;
-			width: 100%;
-			margin: auto;
-			text-align: center;
-			font-size: 2rem;
-			opacity: 0;
-			-webkit-transition: opacity 2s;
-		}
-		#loader img {
-			display: block;
-			margin: auto;
-			margin-top: 8%;
-		}
-		#button {
-			height: 6%;
-			width: 9%;
-			font-size: 1rem;
-			font-style: normal;
-			font-family: 'Open Sans';
-			margin: auto;
-			background-color: #000;
-			color: white;
-			opacity: 0.7;
-			border-radius: 10px;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			opacity: 0;
-			-webkit-transition: opacity 4s;
-			cursor: link, auto;
-		}
-		#button:hover {
-			-webkit-transform: scale(1.1);
-		}
-		#button:active {
-			cursor: move, auto;
-		}
-		h1 {
-			font-family: "Montserrat";
-		}
-		p {
-			font-family: "Open Sans";
-		}
-		img {
-			display: block;
-			height: 20%;
-		}
-	</style>
-	<script>
-		function loader() {
-		    setTimeout(function () {
-		      $('#loader').css("opacity", "1");
-		      setTimeout(function () {
-		        $('#button').css("opacity", "1");
-		      }, 1000);
-		    }, 700);
+<meta charset="UTF-8">
+<meta name="description" content="An analysis of Walmat's effect on small towns.">
+<meta name="author" content="Alan Ma">
+<link rel="stylesheet" href="main.css">
+<script src="jquery-3.1.1.min.js"></script>
+<script src="script.js"></script>
+<title>Walmart or Not</title>
 
-		    $("#button").click(function(){
-		      $('#loader').css("opacity","0");
-		      $('#container').css("display","inline");
-		      setTimeout(function () {
-		        $('#loader').css("display", "none");
-		        location.href = "main.html"
-		      }, 1500);
-		    });
-		}
-		$(document).ready(function() {
-		    loader();
-		});
-	</script>
-</head>
-<body>
-	<div id="loader">
-		<img src="img/walmart.png">
-		<h1>Walmart or Not:</h1>
-		<p>An economics project by Yifei Zhang and Alan Ma.</p>
-		<div id="button">Enter</div>
+<div class="container">
+	<div class="loading">
+		<img src="img/walmart.png" alt="walmart logo">
 	</div>
-</body>
-</html>
+</div>
