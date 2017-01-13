@@ -3,19 +3,31 @@ html, body {
 	padding: 0;
 	height: 100%;
 }
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Merriweather";
+	font-weight: normal;
+}
+p, li, a, button {
+	font-family: "Open Sans";
+}
 .loading {
 	background-color: rgb(12, 103, 185);
 	height: 100%;
+	width: 100%;
+	position: fixed;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	animation: swipe 4s;
+	animation: swipe 3s;
+	animation-fill-mode: forwards;
+	z-index: 1;
+	/*display: none;*/
 }
 .loading img {
 	display: block;
 	height: 100px;
 	width: auto;
-	animation: spin 3s ease-in;
+	animation: spin 2s ease-in;
 	animation-fill-mode: forwards;
 }
 @keyframes spin {
@@ -28,9 +40,59 @@ html, body {
 }
 @keyframes swipe {
 	0% {}
-	75% {width: 100%;}
+	66% {width: 100%;}
 	100% {width: 0%;}
 }
+.main {
+	height: 100%;
+	width: 100%;
+}
+.nav {
+	height: 100%;
+	width: 30%;
+	background-color: rgb(12, 103, 185);
+	color: #FFF;
+	box-sizing: border-box;
+	overflow: scroll;
+}
+.nav img {
+	width: 40%;
+	display: block;
+	margin: auto;
+	padding-top: 50px;
+}
+.nav h1, h3 {
+	text-align: center;
+	padding: 0 15%;
+}
+.nav ul {
+	margin-top: 40px;
+	padding: 0;
+	background-color: #FFF;
+}
+.nav li {
+	list-style: none;
+	padding: 5% 5% 5% 10%;
+	width: 100%;
+	box-sizing: border-box;
+	transition: box-shadow 500ms ease-in;
+	background-color: rgb(12, 103, 185);
+}
+.nav li:hover {
+	cursor: pointer;
+	box-shadow: inset 600px 0 0 #1E88E5;
+}
+.current {
+	clip-path: polygon(0 0, 100% 0, 90% 50%, 100% 100%, 100% 105%, 0 105%, 0 0);
+	-webkit-clip-path: polygon(0 0, 100% 0, 90% 50%, 100% 100%, 100% 105%, 0 105%, 0 0);
+}
+
+
+
+
+
+
+
 
 
 
