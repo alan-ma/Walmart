@@ -7,7 +7,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: "Merriweather";
 	font-weight: normal;
 }
-p, li, a, button {
+p, li, a, button, span {
 	font-family: "Open Sans";
 }
 .loading {
@@ -20,8 +20,8 @@ p, li, a, button {
 	justify-content: center;
 	animation: swipe 3s;
 	animation-fill-mode: forwards;
-	z-index: 1;
-	/*display: none;*/
+	z-index: 5;
+	display: none;
 }
 .loading img {
 	display: block;
@@ -54,6 +54,7 @@ p, li, a, button {
 	color: #FFF;
 	box-sizing: border-box;
 	overflow: scroll;
+	float: left;
 }
 .nav img {
 	width: 40%;
@@ -61,7 +62,7 @@ p, li, a, button {
 	margin: auto;
 	padding-top: 50px;
 }
-.nav h1, h3 {
+.nav h1, .nav h3 {
 	text-align: center;
 	padding: 0 15%;
 }
@@ -83,8 +84,130 @@ p, li, a, button {
 	box-shadow: inset 600px 0 0 #1E88E5;
 }
 .current {
-	clip-path: polygon(0 0, 100% 0, 90% 50%, 100% 100%, 100% 105%, 0 105%, 0 0);
-	-webkit-clip-path: polygon(0 0, 100% 0, 90% 50%, 100% 100%, 100% 105%, 0 105%, 0 0);
+	clip-path: polygon(0 -5%, 100% -5%, 100% 0, 90% 50%, 100% 100%, 100% 105%, 0 105%, 0 0);
+	-webkit-clip-path: polygon(0 -5%, 100% -5%, 100% 0, 90% 50%, 100% 100%, 100% 105%, 0 105%, 0 0);
+}
+.right {
+	float: right;
+	width: 70%;
+	height: 100%;
+}
+.content {
+	width: 100%;
+	height: 55%;
+	box-sizing: border-box;
+	padding: 30px 70px;
+	overflow: hidden;
+	position: relative;
+	display: none;
+	transition: box-shadow 500ms ease-in;
+}
+.content p {
+	width: 70%;
+	height: 75%;
+	overflow-y: scroll;
+}
+.content img {
+	display: block;
+	right: 40px;
+	bottom: 0;
+	max-width: 30%;
+	max-height: 90%;
+	position: absolute;
+}
+.transition {
+	position: absolute;
+	height: 100%;
+	width: 0;
+	z-index: 1;
+	background-color: #FFF;
+	transition: width 300ms;
+}
+.panel-container {
+	perspective: 1000px;
+	position: relative;
+	width: 90%;
+	height: 37%;
+	margin: auto;
+	box-shadow: 0 2px 3px rgba(0,0,0,0.2), 0 2px 4px rgba(0,0,0,0.4);
+}
+.panel-container, .panels {
+	transform-origin: center center;
+}
+.panel-container.hover .panels {
+	transform: rotateX(180deg);
+}
+.front, .back, .panels {
+	width: 100%;
+	height: 100%;
+}
+.panels {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+	position: relative;
+}
+.front, .back {
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.front {
+	z-index: 2;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.back {
+	transform: rotateX(-180deg);
+}
+.front .social, .front .economic, .front .environmental {
+	width: 28%;
+	height: 90%;
+	box-sizing: border-box;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+	text-align: center;
+	position: relative;
+	overflow: scroll;
+}
+.front p {
+	padding: 10px;
+}
+.front .more {
+	width: 100%;
+	bottom: 0;
+	position: absolute;
+	background-color: #2196F3;
+	transition: box-shadow 600ms ease-in;
+}
+.front .more:hover {
+	box-shadow: inset 400px 0 0 #90CAF9;
+	cursor: pointer;
+}
+.front .more h4 {
+	margin: 0;
+	padding: 5px;
+}
+.back .social, .back .economic, .back .environmental {
+	display: none;
+	padding: 0 20px;
+	box-sizing: border-box;
+	height: 100%;
+	overflow-y: scroll;
+}
+.close {
+	font-size: 2rem;
+	font-weight: bold;
+	position: absolute;
+	top: 15px;
+	right: 30px;
+	padding: 0;
+	margin: 0;
+}
+.close:hover {
+	cursor: pointer;
+	transform: scale(1.3);
 }
 
 
