@@ -21,7 +21,7 @@ p, li, a, button, span {
 	animation: swipe 3s;
 	animation-fill-mode: forwards;
 	z-index: 5;
-	display: none;
+	/*display: none;*/
 }
 .loading img {
 	display: block;
