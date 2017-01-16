@@ -10,6 +10,9 @@ h1, h2, h3, h4, h5, h6 {
 p, li, a, button, span {
 	font-family: "Open Sans";
 }
+::-webkit-scrollbar { 
+    display: none; 
+}
 .loading {
 	background-color: rgb(12, 103, 185);
 	height: 100%;
