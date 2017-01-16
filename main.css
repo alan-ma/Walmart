@@ -196,10 +196,10 @@ p, li, a, button, span {
 	box-sizing: border-box;
 	height: 100%;
 	position: relative;
+	overflow-y: scroll;
 }
 .back p {
 	width: 68%;
-	overflow-y: scroll;
 }
 .back img {
 	position: absolute;
