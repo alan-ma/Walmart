@@ -21,7 +21,7 @@ p, li, a, button, span {
 	animation: swipe 3s;
 	animation-fill-mode: forwards;
 	z-index: 5;
-	/*display: none;*/
+	display: none;
 }
 .loading img {
 	display: block;
@@ -94,7 +94,7 @@ p, li, a, button, span {
 }
 .content {
 	width: 100%;
-	height: 55%;
+	height: 58%;
 	box-sizing: border-box;
 	padding: 30px 70px;
 	overflow: hidden;
@@ -103,8 +103,8 @@ p, li, a, button, span {
 	transition: box-shadow 500ms ease-in;
 }
 .content p {
-	width: 70%;
-	height: 75%;
+	width: 68%;
+	height: 77%;
 	overflow-y: scroll;
 }
 .content img {
@@ -127,7 +127,7 @@ p, li, a, button, span {
 	perspective: 1000px;
 	position: relative;
 	width: 90%;
-	height: 37%;
+	height: 39%;
 	margin: auto;
 	box-shadow: 0 2px 3px rgba(0,0,0,0.2), 0 2px 4px rgba(0,0,0,0.4);
 }
@@ -195,6 +195,19 @@ p, li, a, button, span {
 	box-sizing: border-box;
 	height: 100%;
 	overflow-y: scroll;
+	position: relative;
+}
+.back p {
+	width: 68%;
+}
+.back img {
+	position: absolute;
+	max-width: 28%;
+	max-height: 70%;
+	right: 30px;
+	clear: right;
+	z-index: -1;
+
 }
 .close {
 	font-size: 2rem;
@@ -209,7 +222,6 @@ p, li, a, button, span {
 	cursor: pointer;
 	transform: scale(1.3);
 }
-
 
 
 
