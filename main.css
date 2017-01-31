@@ -85,6 +85,11 @@ p, li, a, button, span {
 	cursor: pointer;
 	box-shadow: inset 600px 0 0 #1E88E5;
 }
+.nav p {
+	padding: 5px 10px;
+	color: #AAA;
+	font-family: "Open Sans", sans-serif;
+}
 .current {
 	clip-path: polygon(0 -5%, 100% -5%, 100% 0, 90% 50%, 100% 100%, 100% 105%, 0 105%, 0 0);
 	-webkit-clip-path: polygon(0 -5%, 100% -5%, 100% 0, 90% 50%, 100% 100%, 100% 105%, 0 105%, 0 0);
